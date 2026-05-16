@@ -15,7 +15,7 @@ const agents = [
 
 const timeline = [
   { date: "Today", label: "Platform live", done: true },
-  { date: "Coming soon", label: " pitch", done: false, highlight: true },
+  { date: "", label: " pitch", done: false, highlight: true },
   { date: "June", label: "First 10 hosts", done: false },
   { date: "Summer", label: "Tourist season launch", done: false },
   { date: "2027", label: "Multi-city expansion", done: false },
@@ -171,7 +171,7 @@ export default function PitchDemo() {
   return (
     <div style={{ minHeight: "100vh", background: "#080808", fontFamily: "Georgia, serif", color: "#fff", display: "flex", flexDirection: "column" }}>
       <header style={{ padding: "1rem 2rem", borderBottom: "1px solid #111", display: "flex", alignItems: "center", justifyContent: "space-between", flexShrink: 0 }}>
-        <span style={{ fontSize: "1.2rem", fontWeight: "800" }}>Feel<span style={{ color: "#e8845a" }}>Good</span><span style={{ fontSize: "0.6rem", color: "#333", marginLeft: "0.7rem", letterSpacing: "0.2em" }}>PITCH · Coming soon</span></span>
+        <span style={{ fontSize: "1.2rem", fontWeight: "800" }}>Feel<span style={{ color: "#e8845a" }}>Good</span><span style={{ fontSize: "0.6rem", color: "#333", marginLeft: "0.7rem", letterSpacing: "0.2em" }}>PITCH · </span></span>
         <div style={{ display: "flex", gap: "0.4rem" }}>
           {slideLabels.map((label, i) => (
             <button key={i} onClick={() => goTo(i)} style={{ padding: "0.3rem 0.7rem", borderRadius: "999px", border: "none", background: current === i ? "#e8845a" : "#111", color: current === i ? "#fff" : "#444", fontSize: "0.7rem", cursor: "pointer", letterSpacing: "0.05em", fontFamily: "Georgia, serif", transition: "all 0.2s" }}>{label}</button>
