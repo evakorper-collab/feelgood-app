@@ -15,7 +15,7 @@ const agents = [
 
 const timeline = [
   { date: "Today", label: "Platform live", done: true },
-  { date: "Coming soon", label: "InnCubator pitch", done: false, highlight: true },
+  { date: "Coming soon", label: " pitch", done: false, highlight: true },
   { date: "June", label: "First 10 hosts", done: false },
   { date: "Summer", label: "Tourist season launch", done: false },
   { date: "2027", label: "Multi-city expansion", done: false },
