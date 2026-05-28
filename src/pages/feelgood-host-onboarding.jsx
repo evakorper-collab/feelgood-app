@@ -29,7 +29,7 @@ export default function HostOnboarding() {
     setMessages(newMessages);
     setLoading(true);
     try {
-      const response = await fetch("/ .netlify/functions/claude", {
+      const response = await fetch("/ .netlify/functions/anthropic", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -62,7 +62,7 @@ export default function HostOnboarding() {
     setStarted(true);
     setLoading(true);
     try {
-      const response = await fetch("/ .netlify/functions/claude", {
+      const response = await fetch("/ .netlify/functions/anthropic", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
