@@ -11,8 +11,8 @@ const navLinks = [
   { path: '/vibe', label: '🎯 Vibe Matcher' },
   { path: '/host', label: '🏠 Host Onboarding' },
   
-  { path: '/pitch', label: '🎤 Pitch Deck' },
-  { path: '/map', label: '🗺️ Master Map' },
+  
+  ,
 ]
 
 function Nav() {
