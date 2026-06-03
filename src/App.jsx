@@ -10,7 +10,7 @@ const navLinks = [
   { path: '/', label: '🌐 Book' },
   { path: '/vibe', label: '🎯 Vibe Matcher' },
   { path: '/host', label: '🏠 Host Onboarding' },
-  { path: '/hq', label: '🏢 Agent HQ' },
+  
   { path: '/pitch', label: '🎤 Pitch Deck' },
   { path: '/map', label: '🗺️ Master Map' },
 ]
