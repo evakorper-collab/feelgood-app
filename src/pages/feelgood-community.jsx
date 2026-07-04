@@ -1,12 +1,4 @@
 import React, { useState } from "react";
-import { MapPin, Users, Clock, ArrowUpRight, Mountain, Flame, Compass, Calendar, User } from "lucide-react";
-
-const tabs = [
-  { id: "discover", label: "Discover", icon: Compass },
-  { id: "community", label: "Community", icon: Users },
-  { id: "bookings", label: "Bookings", icon: Calendar },
-  { id: "profile", label: "Profile", icon: User },
-];
 
 const activities = [
   {
@@ -68,7 +60,6 @@ const tagColor = {
 
 export default function FeelGoodCommunity() {
   const [joined, setJoined] = useState({});
-  const [activeTab, setActiveTab] = useState("community");
 
   const toggleJoin = (id) =>
     setJoined((prev) => ({ ...prev, [id]: !prev[id] }));
@@ -76,7 +67,7 @@ export default function FeelGoodCommunity() {
   return (
     <div
       style={{ backgroundColor: "#EDEFE9", color: "#14231C" }}
-      className="min-h-screen w-full font-sans pb-20 relative"
+      className="min-h-screen w-full font-sans"
     >
       {/* eyebrow / concept note */}
       <div
@@ -86,11 +77,11 @@ export default function FeelGoodCommunity() {
         Concept placeholder · not yet wired to live data
       </div>
 
-      {/* HERO — trailhead signpost */}
+      {/* HERO */}
       <section className="px-6 md:px-16 pt-14 pb-10 border-b" style={{ borderColor: "#8A9A8C55" }}>
         <div className="max-w-5xl mx-auto">
           <div className="flex items-center gap-2 mb-4" style={{ color: "#5C7A5E" }}>
-            <Mountain size={18} strokeWidth={2.5} />
+            <span>⛰️</span>
             <span className="text-sm tracking-wide uppercase font-semibold">
               Innsbruck, live right now
             </span>
@@ -160,7 +151,7 @@ export default function FeelGoodCommunity() {
                     className="flex items-center gap-1 text-xs"
                     style={{ color: "#5C7A5E", fontFamily: "'JetBrains Mono', monospace" }}
                   >
-                    <Clock size={12} /> {a.time}
+                    🕐 {a.time}
                   </span>
                 </div>
 
@@ -179,7 +170,7 @@ export default function FeelGoodCommunity() {
                     className="flex items-center gap-1 text-sm"
                     style={{ color: "#5C7A5E" }}
                   >
-                    <Users size={14} /> {a.spots}
+                    👥 {a.spots}
                   </span>
                   <button
                     onClick={() => toggleJoin(a.id)}
@@ -206,7 +197,7 @@ export default function FeelGoodCommunity() {
         <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
           <div>
             <div className="flex items-center gap-2 mb-3" style={{ color: "#E8A93B" }}>
-              <Flame size={18} />
+              <span>🔥</span>
               <span className="text-sm uppercase tracking-wide font-semibold">
                 For hosts
               </span>
@@ -226,7 +217,7 @@ export default function FeelGoodCommunity() {
             className="flex items-center gap-2 text-sm font-semibold px-5 py-3 rounded-full"
             style={{ backgroundColor: "#E8A93B", color: "#14231C" }}
           >
-            Start a group <ArrowUpRight size={16} />
+            Start a group ↗
           </button>
         </div>
       </section>
@@ -234,39 +225,9 @@ export default function FeelGoodCommunity() {
       {/* footer note */}
       <div className="px-6 md:px-16 py-6 text-center text-xs" style={{ color: "#5C7A5E" }}>
         <div className="flex items-center justify-center gap-1">
-          <MapPin size={12} /> Innsbruck & surrounding valleys
+          📍 Innsbruck & surrounding valleys
         </div>
       </div>
-
-      {/* BOTTOM NAV — where Community lives as a tab */}
-      <nav
-        className="fixed bottom-0 left-0 right-0 flex justify-around items-center py-3 border-t"
-        style={{ backgroundColor: "#FFFFFF", borderColor: "#8A9A8C40" }}
-      >
-        {tabs.map((t) => {
-          const Icon = t.icon;
-          const active = activeTab === t.id;
-          return (
-            <button
-              key={t.id}
-              onClick={() => setActiveTab(t.id)}
-              className="flex flex-col items-center gap-1 px-3"
-            >
-              <Icon
-                size={20}
-                strokeWidth={active ? 2.5 : 2}
-                color={active ? "#14231C" : "#8A9A8C"}
-              />
-              <span
-                className="text-[11px] font-medium"
-                style={{ color: active ? "#14231C" : "#8A9A8C" }}
-              >
-                {t.label}
-              </span>
-            </button>
-          );
-        })}
-      </nav>
     </div>
   );
 }
