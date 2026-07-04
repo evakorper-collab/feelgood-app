@@ -5,12 +5,12 @@ import HostOnboarding from './pages/feelgood-host-onboarding.jsx'
 import FeelGoodHQ from './pages/feelgood-hq.jsx'
 import LaunchGuide from './pages/feelgood-launch-guide.jsx'
 import MasterMap from './pages/feelgood-master-map.jsx'
-
+import Community from './pages/feelgood-community.jsx'
 const navLinks = [
   { path: '/', label: '🌐 Book' },
   { path: '/vibe', label: '🎯 Vibe Matcher' },
   { path: '/host', label: '🏠 Host Onboarding' },
-  
+  { path: '/community', label: '👥 Community' },
   
   ,
 ]
@@ -68,6 +68,7 @@ export default function App() {
           <Route path="/hq" element={<FeelGoodHQ />} />
           <Route path="/pitch" element={<PitchDeck />} />
           <Route path="/map" element={<MasterMap />} />
+          <Route path="/community" element={<Community />} />
         </Routes>
         <Nav />
       </div>
